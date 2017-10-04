@@ -1,0 +1,422 @@
+
+
+/*BEGIN:https://boutique.orange.fr/medias/newshop/internet/css/eligibility.css*/
+/*** --- TEST ELIGIBILITE --- ***/
+
+.bloc-test-eligibilite .input-line-test,
+.bloc-test-eligibilite .input-address-test,
+.hide{
+    display: none;
+}
+
+.test-eligibility{
+  background: #fff;
+  border-bottom: 9px solid #fff;
+  border-top: 6px solid #fff;
+  display: table;
+  margin:  40px auto 27px;
+  width: 990px;
+}
+
+.bloc-information-test-eligibilite-obligatoire + div[id$="OngletsTypeEligibilite"] .test-eligibility{
+    margin-top: 0;
+}
+
+.test-eligibility .blk{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #000;
+  display: table-cell;
+  font: normal 14px/15px 'helvetica55',Arial,sans-serif;
+  padding:  0 24px 9px;
+  vertical-align: top;
+}
+
+.test-eligibility .blk .title{
+  font: normal 18px/27px 'helvetica75',Arial,sans-serif;
+  margin-bottom: 5px;
+}
+
+.test-eligibility .blk .btn{
+  background: #fff;
+  border: 2px solid #000;
+  color:  #000;
+  display: inline-block;
+  font: normal 16px/29px 'helvetica75',Arial,sans-serif;
+  float: right;
+  height: 32px;
+  margin: 22px 0 0;
+  padding: 0 19px;
+}
+
+.test-eligibility .blk .btn:hover{
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+.test-eligibility .blk .btn:active{
+  background: #f16e00;
+  border: 2px solid #f16e00;
+  color:  #fff;
+  text-decoration: none;
+}
+
+/*** bloc "deja client" ***/
+.test-eligibility .blk.customer-already{
+  border-right: 2px solid #eee;
+  padding-right: 16px;
+  text-align: center;
+  width: 256px;
+}
+
+.test-eligibility .blk.customer-already p{
+   text-align: left; 
+}
+
+.test-eligibility .blk.customer-already figure{
+    padding-top: 18px;
+}
+
+.test-eligibility .blk.customer-already .btn{
+    float: inherit;
+    margin-top: 14px;
+}
+
+/*** bloc "nouveau client" ***/
+.test-eligibility .blk.customer-new .choice-test{
+  display: table;
+  margin-top: 18px;
+  width: 100%;
+}
+
+.test-eligibility .blk.customer-new .choice-test .phone,
+.test-eligibility .blk.customer-new .choice-test .home{
+  display: table-cell;
+  position: relative;
+  vertical-align: top;
+  width: 50%;
+}
+
+.test-eligibility .blk.customer-new .choice-test .phone > div,
+.test-eligibility .blk.customer-new .choice-test .home > div{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font: normal 16px/55px 'helvetica75',Arial,sans-serif;
+  height: 55px;
+  padding-left: 88px;
+  width: 100%;
+}
+
+
+.test-eligibility .blk.customer-new .choice-test > div > div:hover{
+    cursor: pointer;
+}
+
+.test-eligibility .blk.customer-new .choice-test .actif .arrow{ 
+  border-style: solid;
+  border-width: 11px 10.5px 0 10.5px;
+  border-color: #50be87 transparent transparent transparent;
+  display: block;
+  height: 0;
+  left: 48%;
+  position: absolute;
+  top:  55px;
+  width: 0;
+}
+
+.test-eligibility .blk.customer-already + .blk.customer-new .choice-test .actif .arrow{
+    left: 128px;
+}
+
+/* Numero */
+.test-eligibility .blk.customer-new .choice-test .phone{
+  border-right: 2px solid #fff;
+}
+
+.test-eligibility .blk.customer-new .choice-test .phone > div{
+  background: #d6d6d6 url(//boutique.orange.fr/medias/newshop/internet/css/skin-test-eligibilite/phone-off.png) no-repeat 16px 7px;
+}
+
+.test-eligibility .blk.customer-new .choice-test .phone.actif > div{
+  background: #50be87 url(phone-on.png) no-repeat 16px 7px;
+}
+
+/* Adresse */
+.test-eligibility .blk.customer-new .choice-test .home > div{
+  background: #d6d6d6 url(home-off.png) no-repeat 15px 9px;
+}
+
+.test-eligibility .blk.customer-new .choice-test .home.actif > div{
+  background: #50be87 url(//boutique.orange.fr/medias/newshop/internet/css/skin-test-eligibilite/home-on.png) no-repeat 15px 9px;
+}
+
+/* Test */
+
+.test-eligibility .blk.customer-new .content-test{
+    margin-top: 18px;
+}
+
+.test-eligibility .blk.customer-new .content-test .left{
+    float: left;
+}
+
+.test-eligibility .blk.customer-new .content-test .hide{
+    display: none;
+}
+
+.test-eligibility .blk.customer-new .content-test p:first-child{
+  margin-bottom: 7px;
+}
+
+.test-eligibility .blk.customer-new .content-test .formSaisieAdresseAutoCompletion{
+    display: inline-block;
+}
+
+.test-eligibility .blk.customer-new .content-test input{
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  height: 37px;
+  line-height: 33px;
+  padding-left: 18px;
+  vertical-align: top
+}
+
+.test-eligibility .blk.customer-new .content-test #adresse input#TBX_SaisieAdresseAutocompletion{
+    width: 547px;
+}
+
+.test-eligibility .blk.customer-new .content-test .num-tel,
+.test-eligibility .blk.customer-already + .blk.customer-new .content-test #adresse input#TBX_SaisieAdresseAutocompletion{
+  width: 496px;
+}
+
+.test-eligibility .blk.customer-new .content-test #adresse label{
+    display: block;
+    font: normal 16px/18px 'Orangesans75', Arial, sans-serif;
+    margin-bottom: 7px;
+}
+
+.test-eligibility .blk.customer-new .content-test .left,
+.test-eligibility .blk.customer-new .content-test .btn{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.test-eligibility .blk.customer-new .content-test .btn{
+    float: inherit;
+    height: 33px;
+    margin: 25px 0 0 14px;
+}
+
+.test-eligibility .blk.customer-new .content-test .exemple{
+  color:  #666;
+}
+
+.test-eligibility .blk.customer-new .content-test .rcv{
+    clear: both;
+}
+
+/* Erreur */
+.test-eligibility .blk .field-validation-error.hide,
+.test-eligibility .blk .no-address,
+.test-eligibility .blk .field-validation-error{
+    display: none;
+}
+
+.content-error.blk-error {
+    display: block;
+    width: 990px;
+    margin: 40px auto 27px;
+}
+
+.content-error.blk-error + .test-eligibility{
+    margin-top: 18px;
+}
+
+.bloc-information-test-eligibilite-obligatoire + div[id$="OngletsTypeEligibilite"] .content-error.blk-error{
+    margin-top: 0;
+}
+
+/* Auto completion */
+.test-eligibility .blk #adresse{
+    position: relative;
+}
+
+.ui-autocomplete {
+    background: #fff;
+    width: 286px !important;
+    border: 2px solid #ccc;
+    border-top: none;
+    position: absolute !important;
+    top: 65px !important;
+}
+.ui-autocomplete li {
+    min-height: 40px;
+    padding: 3px 9px;
+}
+.ui-autocomplete li:hover {
+    background: #000;
+    cursor: pointer;
+}
+.ui-autocomplete li a {
+    font: normal 16px/18px helvetica75,Arial,sans-serif;
+}
+.ui-autocomplete li:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* spinner */
+.eligibility .content-test.wait{
+    height: 108px;
+    position: relative;
+}
+
+.eligibility .content-test.wait .spinner{
+  background: #fff url(//boutique.orange.fr/medias/newshop/internet/css/skin-common/spinner.gif) no-repeat center center;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/*** --- MESSAGE D'ERREUR -- ***/
+.blk-error{
+  background: #fff url(//boutique.orange.fr/medias/newshop/internet/css/skin-common/picto-warning.png) no-repeat 24px 11px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #dc3c14;
+  margin: 9px auto;
+  padding: 12px 0 14px 61px;
+  width: 990px;
+}
+
+.eligibility .blk-error.show{
+    display: none;
+}
+
+.blk-error p{
+  margin-bottom: 9px;
+}
+
+.blk-error .MutLinkBlackChevron{
+  background-position: 100% -157px;
+  font: normal 14px/20px 'Orangesans75', Arial, sans-serif;
+}
+
+.blk-error .MutLinkBlackChevron.BoutonEchat{
+    display: inline-block !important;
+}
+
+.blk-error .MutLinkBlackChevron:hover{
+  background-position: 100% 7px;
+  color: #f16e00;
+}
+
+/*** --- RESULTAT ELIGIBILITE --- ***/
+.result-eligibility{
+  margin:  0 auto 36px;
+  width: 990px;
+}
+
+.result-eligibility .rappel-adresse,
+.result-eligibility .result{
+  background: #fff;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*** Rappel de l'adresse ***/
+.result-eligibility .rappel-adresse{
+  font: normal 14px/18px 'Orangesans55', Arial, sans-serif;
+  margin-bottom: 9px;
+  padding: 11px 20px 10px 24px;
+}
+
+.result-eligibility .rappel-adresse strong{
+  font: normal 16px/18px 'Orangesans75', Arial, sans-serif;
+}
+
+.result-eligibility .rappel-adresse > p{
+  float: left;
+  margin-bottom: 5px;
+  clear: both;
+}
+
+.result-eligibility .rappel-adresse > p + p{
+    clear: both;
+    margin-bottom: 0;
+}
+
+.result-eligibility .rappel-adresse .offre-actuelle{
+    border-top: 2px solid #eee;
+    float: inherit;
+    margin-top: 12px;
+    padding-top: 15px;
+}
+
+.result-eligibility .rappel-adresse > .MutLinkBlackChevron{
+  background-position: 100% -157px;
+  float:  right;
+  font: normal 14px/20px 'Orangesans75', Arial, sans-serif;
+}
+
+.result-eligibility .rappel-adresse > .MutLinkBlackChevron:hover{
+  background-position: 100% 7px;
+}
+
+/*** Infos eligibilite ***/
+.result-eligibility .result{
+  display: table;
+  width: 100%;
+}
+
+.result-eligibility .result > figure,
+.result-eligibility .result > section{
+  display: table-cell;
+}
+
+.result-eligibility .result > figure{
+  background: #4bb4e6;
+  padding-top: 7px;
+  vertical-align: middle;
+  width: 150px;
+}
+
+.result-eligibility .result > section{
+  background: transparent url(//boutique.orange.fr/medias/newshop/internet/css/skin-test-eligibilite/coche.png) no-repeat 29px 20px;
+  padding: 21px 24px 24px 60px;
+}
+
+/* Infos supplementaires */
+.result-eligibility .result .infos-supp{
+  border-top:  2px solid #eee;
+  margin-top: 23px;
+  padding-top: 20px;
+}
+
+.result-eligibility .result .infos-supp .MutLinkBlackChevron{
+  background-position: 100% -157px;
+  font: normal 14px/18px 'Orangesans75', Arial, sans-serif;
+}
+
+.result-eligibility .result .infos-supp .MutLinkBlackChevron:hover{
+  background-position: 100% 7px;
+}
+
+
+
+/*END:https://boutique.orange.fr/medias/newshop/internet/css/eligibility.css*/

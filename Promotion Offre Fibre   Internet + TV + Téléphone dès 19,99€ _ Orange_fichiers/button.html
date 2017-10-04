@@ -1,0 +1,229 @@
+
+
+
+// Cplusrc version: G7R6C3
+// asyncButton.jsp
+// link=
+// eidScenario=2353289woy13043428
+
+// Stocke les variables du scriptlet, avec cloisonnement par scenario 
+// (compatibilite multi boutons / script asynchrone) 
+
+// RAVA-2013-076: on initialise la structure pour gerer l'absence eventuelle des parametre 
+//[CplusRC] [Relu par DJE] [Code de CGL10718] [DE-RC-2016-021] Ajout d une variable dynamique pour le pre chargement des informations
+// - cette structure dediee au scenario stocke les variables
+if( typeof c2c_variables1 === 'undefined') {
+	var c2c_variables1 = {};
+}
+c2c_variables1["2353289woy13043428"]= { 
+	v1: '', v2: '', v3: '', v4: '', v5: '', 
+	v6: '', v7: '', v8: '', v9: '', v10: '', 
+	label: '', backurl: '', numero_appele: '', ident_client: ''};
+	try { c2c_variables1["2353289woy13043428"].v1 = v1; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v2 = v2; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v3 = v3; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v4 = v4; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v5 = v5; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v6 = v6; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v7 = v7; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v8 = v8; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v9 = v9; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].v10 = v10; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].label = label; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].backurl = backurl; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].numero_appele = numero_appele; } catch (err) {}
+	try { c2c_variables1["2353289woy13043428"].ident_client = ident_client; } catch (err) {}
+
+	// RAVA-2013-077 - pas de jquery dans le scriptlet asynchrone
+	// -> on ne reprend ques les methodes utiles de jequery
+	// Cf jquery 1.4.2
+	function httpSuccess ( xhr ) {
+		try {
+			// IE error sometimes returns 1223 when it should be 204 so treat it as success, see #1450
+			return !xhr.status && location.protocol === "file:" ||
+				// Opera returns 0 when status is 304
+				( xhr.status >= 200 && xhr.status < 300 ) ||
+				xhr.status === 304 || xhr.status === 1223 || xhr.status === 0;
+		} catch(e) {}
+
+		return false;
+	}	
+CplusRC_scenarios_2353289woy13043428="loading";	
+	
+	/**
+	* this script is loaded immediately. it works like a buffer	
+	* so as to prevent the latence occured during the test in the loading
+	* of the openJQuery library. 
+	*/
+	function loadButton() {
+		// The $.ajax() function returns the XMLHttpRequest object that it creates
+		//  <a href='javascript:openLinkSite2136986qnh1317042()'>Votre Lien</a>
+		// Url 'synchrone'
+		var url='https://c2cu.internetpluspro.orange-business.com:443/c2call-frontend/buttonAsync/scriptRequete2.html?c=2741598pem129189&s=2353289woy13043428&link=';
+		
+		// Objet pour l'ajax 
+		var req;
+		
+	    var xHrq = openjQuery.ajax({
+			async: true, 	
+			url: url,
+			data: {},
+			dataType: "script",
+			cache: false,
+			success: function(div) {
+				drawCallButton(div);
+			}
+		});
+	    
+	} 
+	
+	/**
+	* fonction externalisee qui traite le retour asynchrone.
+	* param div la partie html à dessiner! 
+	*/
+	function drawCallButton(div) {
+		
+    		
+		
+
+		// Ajout du script "div" contenant le script du bouton.
+		try {
+    		// RAVA-2013-077: on evite l'utilisation de jquery au chargement du bouton 
+			
+			// cf jquery.1.4.2
+			// Inspired by code by Andrea Giammarchi
+			// http://webreflection.blogspot.com/2007/08/global-scope-evaluation-and-dom.html
+			var head = document.getElementsByTagName("head")[0] || document.documentElement,
+				script = document.createElement("script");
+
+			script.type = "text/javascript";
+
+			try {
+				script.appendChild( document.createTextNode( div ) );
+			} catch( e ) {
+				script.text = div;
+			}
+
+			// Use insertBefore instead of appendChild to circumvent an IE6 bug.
+			// This arises when a base node is used (#2709).
+			head.appendChild( script, head.firstChild );
+			head.removeChild( script )
+    		
+		} catch(err) {}
+			
+	} // End of function "drawCallButton()"	
+	
+	/*	===============================================
+	*					MAIN PART	
+	*	=============================================== */
+	
+	// Chargement de la lib openjQuery
+	
+	// RAI-2013-161 : correction chargement script, 
+	// on utilise la methode commune cplusrc 
+	// (pour gerer l'historique des chargements meme avec IE)
+	// sinon on bloque le chargement de librairies dans les pages suivantes
+	
+	// RAVA-2013-077: on evite l'utilisation de jquery au chargement du bouton 
+	// -> on appelle loadButton immediatement
+	/**
+ * Chargemenent de javascript synchronise  
+ * Date : 12/02/2013
+ * @author MCO
+ */
+
+//////// A CONFIGURER
+
+// Add ECMA262-5 Array methods if not supported natively
+//
+if (!('indexOf' in Array.prototype)) {
+    Array.prototype.indexOf= function(find, i /*opt*/) {
+        if (i===undefined) i= 0;
+        if (i<0) i+= this.length;
+        if (i<0) i= 0;
+        for (var n= this.length; i<n; i++)
+            if (i in this && this[i]===find)
+                return i;
+        return -1;
+    };
+}
+
+//////////////// AJOUT DES LIB ////////
+
+var dv_HeadPage = document.head || document.getElementsByTagName("head")[0];  
+
+/**
+ * A la fin du chargement du script, appelle toutes les callback a ce script:
+ * pour gerer des appels multiples de chargement du meme script, avec differentes callbacks
+ *  
+ * @param {String} url Url du script
+ */
+function check_callback( url ) {
+	// Le script est charge maintenant
+	this.loadedScript.push(url);
+	
+	// appelle toutes les callbacks
+	if ( this.mapCallbackFunctions.hasOwnProperty(url) ) {
+		var cbs=mapCallbackFunctions[url];
+		for ( var i=0; i<cbs.length; i++ ) {
+			cbs[i]();
+		}
+	}
+ }
+ 
+ /**
+ * Charge un script et appelel une callback a la fin du telechargement
+ * @param {String} url Urldu script
+ * @param {Function} callback fonctione appellee a la fin du telechargement
+ * @param {boolean} forceCallback Si true, appelle la callback meme si le script est deja telecharge
+ */
+ function loadScript(url, callback, forceCallback) {
+	 // historique des scripts telecharges sur cette page
+	 if (!this.loadedScript) {
+		 this.loadedScript = new Array();
+	 }
+	 // map des callback lors des telechargements multiples du meme script
+	 if (!this.mapCallbackFunctions) {
+		 this.mapCallbackFunctions = new Object();
+	 }
+	
+	if (this.loadedScript.indexOf(url) >= 0 ) {
+		// Script deja charge
+		if (forceCallback) {
+			// on appelle la cb si forceCallback vaut true
+			callback(); 
+		}
+	} else {
+		// Script non charge
+		var startLoad = true;
+		if ( this.mapCallbackFunctions.hasOwnProperty(url) ) {
+			startLoad = false;	// chargement deja en cours
+		} else {
+			this.mapCallbackFunctions[url] = new Array();
+		}
+		this.mapCallbackFunctions[url].push(callback);
+		if ( startLoad ) {
+			var e = document.createElement("script");
+			// e.src = url + "?" + Math.random();
+			e.src = url;
+			e.type = "text/javascript";
+			if (/msie/i.test(navigator.userAgent) && !/opera/i.test(navigator.userAgent)) {
+				// IE
+				e.onreadystatechange = function(){
+					if (this.readyState == "loaded" || this.readyState == "complete") {
+						check_callback( url );
+					}
+				}
+			} else {
+				// Other browsers
+				e.onload = function () {check_callback( url )};
+			}
+			document.getElementsByTagName("head")[0].appendChild(e);
+		}
+	}
+}
+
+
+	loadScript("https://cdnrc.contactplus.biz/staticRC/js/jquery.open-1.4.2.js", loadButton, true );
+
+	

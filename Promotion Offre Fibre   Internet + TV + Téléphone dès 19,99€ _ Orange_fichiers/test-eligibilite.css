@@ -1,0 +1,775 @@
+/**
+ * CSS: test-eligibilite.css
+ * Pages ciblées: 
+    - Newshop/Transverse/TestEligibilite/TestEligibilite.aspx
+ */
+
+/* ==========================================================================
+   Présentation de la page
+   ========================================================================== */
+.eligibility-test-body {
+    background: #b5e8f7 url("skin-test-eligibilite/line-test-bcg.png") no-repeat 50% 124px;
+}
+
+.eligibility-test-body main {
+    margin: auto;
+    width: 990px;
+}
+
+.eligibility-test-body main *,
+.eligibility-test-body main *:before,
+.eligibility-test-body main *:after {
+    box-sizing: border-box;
+        -moz-box-sizing: border-box;
+}
+
+.eligibility-test-body fieldset {
+    border-width: 0;
+}
+
+.ui-helper-hidden-accessible {
+    left: -9999px;
+    position: absolute;
+}
+
+/* ==========================================================================
+   Contenu de page et formulaire
+   ========================================================================== */
+.eligibility-test-body section > header {
+    margin: 15px 0;
+    width: 600px;
+}
+
+.eligibility-test-body section > header h1,
+.eligibility-test-body section > header h2 {
+    font: 26px/30px Orangesans75, sans-serif;
+    margin-bottom: 20px;
+}
+
+.eligibility-test-body section > header h2 {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.eligibility-test-body section > .content {
+    background: #fff;
+    width: 610px;
+}
+
+.eligibility-test-body section > .content > div input[type="radio"] {
+    display: none;
+}
+
+.eligibility-test-body section > .content > div input[type="radio"] + article {
+    display: none;
+}
+.eligibility-test-body section > .content > div input[type="radio"]:checked + article {
+    display: block;
+}
+
+#testLigne .tab.hide {
+    display: none;
+}
+
+/* Présentation des onglets
+   ========================================================================== */
+.eligibility-test-body .tab-container {
+    background: #000;
+}
+.ie7 .eligibility-test-body .tab-container {
+    zoom: 1;
+}
+
+.eligibility-test-body .tab-container ul {
+    font-size: 0;
+}
+
+.eligibility-test-body .tab-container li {
+    display: inline-block;
+    text-align: center;
+    width: 50%;
+}
+.ie7 .eligibility-test-body .tab-container li {
+    float: left;
+}
+
+.eligibility-test-body .tab-container li label {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font: 21px Orangesans75, sans-serif;
+    padding: 12px 0;
+    text-decoration: none;
+}
+.eligibility-test-body .tab-container li.current label {
+    color: #ff7900;
+    position: relative;
+}
+.eligibility-test-body .tab-container li.current label:after {
+    border-style: solid;
+    border-width: 0 9px 9px 9px;
+    border-color: transparent transparent #fff transparent;
+    bottom: 0;
+    content: '';
+    height: 0;
+    left: 49%;
+    position: absolute;
+    width: 0;
+}
+
+/* Présentation des formulaires
+   ========================================================================== */
+.eligibility-test-body .tab {
+    color: #666;
+    min-height: 285px;
+    padding: 0 43px 30px;
+    position: relative;
+}
+
+.eligibility-test-body .form label, 
+.eligibility-test-body .form input[type="text"],
+.eligibility-test-body .form input[type="tel"],
+.eligibility-test-body .form select,
+.eligibility-test-body .BtnOrange01 a {
+    display: block;
+    width: 100%;
+}
+
+.eligibility-test-body .form label {
+    font: 14px Orangesans55, sans-serif;
+}
+
+.eligibility-test-body .form input[type="text"],
+.eligibility-test-body .form input[type="tel"],
+.eligibility-test-body .form select {
+    background: #fff;
+    padding: 11px 10px;
+}
+
+.eligibility-test-body .global-label {
+    margin: 25px 0;
+}
+
+.eligibility-test-body .BtnOrange01 {
+    margin-top: 25px;
+}
+
+.eligibility-test-body .BtnOrange01 a {
+    background: #ff7900;
+    color: #fff;
+    font: 14px Orangesans75, sans-serif;
+    padding: 14px 0;
+    text-align: center;
+    text-decoration: none;
+}
+
+.eligibility-test-body .BtnOrange01 input[type="submit"] {
+    border-width: 0;
+    cursor: pointer;
+}
+
+/* Loading */
+.eligibility-test-body img[id$="FormEligibilite_Img"] {
+    display: block;
+    margin: auto;
+}
+.eligibility-test-body img[id$="FormEligibilite_Img"]:after {
+    content: 'Test en cours';
+}
+
+/* Autocomplétion */
+.eligibility-test-body .tab ul.ui-autocomplete,
+.eligibility-test-body .field-validation-error {
+    background: #eee;
+}
+
+.eligibility-test-body .tab ul.ui-autocomplete {
+    max-height: 185px;
+    overflow-y: auto;
+    padding: 0 15px;
+    position: absolute !important;
+    width: 524px !important;
+}
+
+.eligibility-test-body .tab ul.ui-autocomplete li {
+    padding: 15px 0;
+}
+
+.eligibility-test-body .tab ul.ui-autocomplete li a {
+    color: #b3b3b3;
+    font-size: 14px;
+}
+
+/* Erreur formulaire */
+.eligibility-test-body .field-validation-error {
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    padding: 8px 15px;
+}
+.eligibility-test-body .field-validation-error.hide {
+    display: none;
+}
+
+.eligibility-test-body .field-validation-error a {
+    color: #ff7900;
+    text-decoration: none;
+}
+
+/* Mode dégradé */
+.eligibility-test-body .tab .fail-soft-mode {
+    border-width: 0;
+    margin-top: 25px;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent {
+    margin-bottom: 15px;
+}
+.ie7 .eligibility-test-body .tab .fail-soft-mode .FormContent {
+    zoom: 1;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent li {
+    display: inline-block;
+    vertical-align: top;
+    width: 64.89%;
+}
+.ie7 .eligibility-test-body .tab .fail-soft-mode .FormContent li {
+    float: left;
+}
+.eligibility-test-body .tab .fail-soft-mode .FormContent li:first-child {
+    margin-right: 3.82%;
+    width: 30.53%;
+}
+.eligibility-test-body .tab .fail-soft-mode .FormContent li.no-number-way {
+    margin: 0;
+    width: 100%;
+}
+
+.ie7 .eligibility-test-body .tab li input[type="text"] {
+    width: 320px;
+}
+.ie7 .eligibility-test-body .tab li:first-child input[type="text"] {
+    width: 140px;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent label:first-child {
+    margin-bottom: 15px;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent .lbl-bold{
+    font-weight: bold;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent li.no-number-way label {
+    display: inline;
+}
+
+.eligibility-test-body .tab .fail-soft-mode .FormContent li.no-number-way .checkBox {
+    margin-right: 10px;
+}
+
+/* Click to call */
+.eligibility-test-body .ctc {
+    margin-top: 10px;
+}
+
+.eligibility-test-body .ctc.error {
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.eligibility-test-body .ctc.error a {
+    color: #f60;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Loading */
+.eligibility-test-body .tab .loading {
+    display: none;
+    line-height: 285px;
+    text-align: center;
+}
+.eligibility-test-body .tab .loading.js-show {
+    display: block;
+}
+
+.eligibility-test-body .tab .loading img {
+    vertical-align: middle;
+}
+
+/* Présentation des mentions légales
+   ========================================================================== */
+main > footer {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+main > footer > p {
+    margin-top: 20px;
+}
+
+main > footer > input[type="checkbox"] {
+    display: none;
+}
+
+main > footer > input[type="checkbox"]:checked ~ .legal-notices {
+    display: block;
+}
+
+main > footer > label {
+    cursor: pointer;
+    display: block;
+    margin: 15px 0;
+}
+
+main > footer > label:before {
+    border-color: transparent transparent transparent #ccc;
+    border-style: solid;
+    border-width: 7.5px 0 7.5px 14px;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-right: 5px;
+    vertical-align: middle;
+    width: 0;
+}
+main > footer > input[type="checkbox"]:checked + label:before {
+    border-color: #ccc transparent transparent transparent;
+    border-width: 12px 7.5px 0 7.5px;
+}
+
+main > footer .legal-notices {
+    display: none;
+}
+
+main > footer .legal-notices > ul > li {
+    margin-top: 20px;
+}
+
+main > footer a {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   5.Popin "wizard"
+   ========================================================================== */
+.wizard-popin {
+    display: none;
+}
+.wizard-popin *{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ui-widget-overlay{
+    position:fixed;
+    top:0;
+    height:100%;
+    width:100%;
+    z-index:10;
+    background-color:rgb(16, 16, 16);
+    opacity:0.8;
+}
+.wizard-popin-container {
+    z-index:100;
+    width:100%;
+    background: #fff;
+    padding: 40px 15px 20px 15px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.wizard-popin-container span{
+    color:#000;
+}
+.wizard-popin-container footer > p > span{
+    font:16px helvneue55, sans-serif;
+}
+.wizard-popin-container .ui-dialog-titlebar {
+    margin-bottom:20px;
+    font:18px helvneue75, sans-serif;
+}
+.wizard-popin-container .ui-dialog-titlebar .close-popin,
+.wizard-popin-container .ui-dialog-titlebar button {
+    background: transparent url('skin-common/close-popin.png') no-repeat 50% 50%;
+    border-width: 0;
+    cursor: pointer;
+    display: block;
+    height: 31px;
+    overflow: hidden;
+    position: absolute;
+    right: 32px;
+    text-indent: -9999px; 
+    top: 37px;
+    width: 25px;
+}
+.wizard-popin .title-like {
+    margin-bottom: 26px;
+}
+.wizard-popin .content div{
+    margin-bottom:25px;
+    vertical-align:bottom;
+}
+/* Titre */
+.wizard-popin .title-like {
+    display: block;
+    font:16px helvneue75, sans-serif;
+}
+
+/* Formulaire */
+.wizard-popin label,
+.wizard-popin input[type="text"],
+.wizard-popin select {
+    display: block;
+    width: 100%;
+}
+.wizard-popin select{
+    height:40px;
+    line-height: 1.42857143;
+    padding: 9px 15px;
+    font: 14px orangesans75, Arial, sans-serif;
+    color: #000;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-box-shadow: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: none;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.wizard-popin select:focus{
+    border-color: #999;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 153, 153, .6);
+    -webkit-box-shadow: none;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(153, 153, 153, .6);
+    box-shadow: none;
+}
+.wizard-popin label {
+    margin-bottom: 10px;
+    font:14px orangesans75, Arial, sans-serif;
+    color:#000;
+}
+.wizard-popin label .required {
+    color: #ff7900;
+}
+.wizard-popin input[type="text"],
+.wizard-popin select {
+    padding: 10px;
+    border:1px solid #ccc;
+}
+.wizard-popin select {
+    padding-bottom:8px;
+}
+.wizard-popin .rb-list li {
+    margin: 10px 0;
+}
+.wizard-popin .rb-list label {
+    display: inline-block;
+    margin-left: 5px;
+    width: auto;
+}
+.wizard-popin .error {
+    color: #f00;
+}
+
+/* Bouton */
+.wizard-popin .btn-valid,
+.wizard-popin input[type="submit"] {
+    background: #f16e00;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    margin:auto;
+    font: 16px orangesans75, Arial, sans-serif;
+    padding: 5px 15px 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    min-width: 90px;
+    height: 38px;
+    border-width: 0;
+}
+#FormulaireBatiment  input[type="submit"]{
+    height:40px;
+}
+.wizard-popin .btn-valid:hover,
+.wizard-popin input[type="submit"]:hover{
+    background-color:#000;
+}
+
+/* Footer */
+.wizard-popin footer a {
+    position:relative;
+    display:inline-block;
+    float:right;
+    margin:5px 20px 0 0;
+    color: #000;
+    font-family:orangesans75, Arial, sans-serif;
+    text-decoration:none;
+}
+.wizard-popin footer a:hover{
+    color:#f16e00;
+}
+.wizard-popin footer a:after{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:10px;
+    margin-left:10px;
+    top:8px;
+    background:transparent url('skin-common/popin-ancre.png') no-repeat;
+}
+.wizard-popin footer a:hover:after{
+    background-image: url('skin-resultat-eligibilite/elg-ancre-hover.png');
+    margin-left: 7px;
+    top: 9px;
+}
+
+/* Popin multiple adresse */
+#popin-multi-address {
+    left: 33%;
+    position: fixed;
+    top: 50px;
+    width: 568px;
+}
+#popin-multi-address .ui-dialog-title {
+    color: #f00;
+}
+#popin-multi-address .content {
+    margin-bottom: 10px;
+    max-height: 150px;
+    overflow: auto;
+}
+
+/* Responsive */
+@media(min-width:768px){
+    .ui-widget-overlay{
+        width:990px;
+    }
+    .wizard-popin input[type="text"]{
+        width:450px;
+    }
+    .wizard-popin-container {
+        width:605px!important;
+        left:0!important;
+        right:0!important;
+        margin:auto;
+        padding: 100px 45px 50px 40px;
+    }
+    .wizard-popin .title-like {
+        font-size:16px;
+    }
+    .wizard-popin-container .ui-dialog-titlebar {
+        margin-bottom:15px;
+        font:24px helvneue75, sans-serif;
+    }
+    .wizard-popin .content {
+        display:inline-block;
+    }
+    .wizard-popin label{
+        display:inline-block;
+        width:auto;
+        margin-right:29px;
+    }
+    .wizard-popin select{
+        display:inline-block;
+        width:320px;
+    }
+    .wizard-popin .btn-valid,
+    .wizard-popin input[type="submit"] {
+        display: inline-block;
+        margin-left:15px;
+    }
+    .wizard-popin .content div{
+        display:inline-block;
+    }
+    #FormulaireBatiment .content div{
+        vertical-align:top;
+    }
+}
+@media(min-width:1024px){
+    .ui-widget-overlay{
+        width:100%;
+    }
+}
+/* Wizard */
+.ie8 .wizard-popin-container .ui-dialog-titlebar{
+    margin-bottom:15px;
+    font-size:24px;
+}
+.ie8 .ui-widget-overlay{
+    width:100%;
+}
+.ie8 .wizard-popin-container {
+    width:625px!important;
+    left:0!important;
+    right:0!important;
+    margin:auto;
+    padding: 100px 45px 50px 40px;
+}
+.ie8 .wizard-popin .title-like {
+    font-size:16px;
+}
+.ie8 .wizard-popin-container .ui-dialog-titlebar {
+    margin-bottom:15px;
+    font:24px orangesans75, Arial, sans-serif;
+}
+.ie8 .wizard-popin .content {
+    display:inline-block;
+}
+.ie8 .wizard-popin label{
+    display:inline-block;
+    width:auto;
+    margin-right:29px;
+}
+.ie8 .wizard-popin select{
+    display:inline-block;
+    width:320px;
+}
+.ie8 .wizard-popin .btn-valid,
+.ie8 .wizard-popin input[type="submit"] {
+    display: inline-block;
+    margin-left:15px;
+}
+.ie8 .wizard-popin .content div{
+    display:inline-block;
+}
+.ie8 #FormulaireBatiment .content div{
+    vertical-align:top;
+}
+
+/* ==========================================================================
+   Adaptation mobile
+   ========================================================================== */
+@media only screen and (min-device-width : 320px) and (max-device-width : 736px) {
+    .eligibility-test-body {
+        background: #eee;
+    }
+    
+    .eligibility-test-body main {
+        width: 100%;
+    }
+
+    .eligibility-test-body section {
+        margin-bottom: 30px;
+    }
+
+    .eligibility-test-body section > header {
+        width: auto;
+    }
+
+    /* ==========================================================================
+       Contenu de page et formulaire
+       ========================================================================== */
+    .eligibility-test-body section > .content {
+        margin: auto;
+        width: 95%;
+    }
+
+    .eligibility-test-body section > header {
+        margin-bottom: 15px;
+    }
+
+    /* Présentation des onglets
+       ========================================================================== */
+    .eligibility-test-body .tab-container {
+        background: #e0e0e0;
+    }
+
+    .eligibility-test-body .tab-container li label {
+        color: #b3b3b3;
+        display: block;
+        font: bold 12px/18px sans-serif;
+        padding: 10px 0;
+    }
+    .eligibility-test-body .tab-container li.current label {
+        background: #fff;
+    }
+    .eligibility-test-body .tab-container li.current label:after {
+        display: none;
+    }
+    .eligibility-test-body .tab-container li label:before {
+        background: transparent url("skin-resultat-eligibilite/icons-sprite.png") no-repeat;
+        content: '';
+        display: block;
+        height: 45px;
+        margin: 0 auto 8px;
+        width: 45px;
+    }
+    .eligibility-test-body .tab-container li.line label:before {
+        background-position: -584px 0;
+    }
+    .eligibility-test-body .tab-container li.line.current label:before {
+        background-position: -639px 0;
+    }
+    .eligibility-test-body .tab-container li.address label:before {
+        background-position: -474px 0;
+    }
+    .eligibility-test-body .tab-container li.address.current label:before {
+        background-position: -529px 0;
+    }
+
+    /* Présentation des formulaires
+       ========================================================================== */
+    .eligibility-test-body .tab {
+        min-height: inherit;
+        padding: 0 2.63% 15px;
+    }
+
+    .eligibility-test-body .global-label {
+        margin: 15px 0;
+    }
+
+    .eligibility-test-body .BtnOrange01 {
+        text-align: center;
+    }
+
+    .eligibility-test-body .BtnOrange01 a {
+        border-radius: 3px;
+        color: #fff;
+        display: inline-block;
+        font: bold 15px/25px sans-serif;
+        margin: auto;
+        padding: 8px 10.5%;
+        width: auto;
+    }
+
+    .eligibility-test-body .form input[type="text"],
+    .eligibility-test-body .form input[type="tel"] {
+        border: 1px solid #acacac;
+        border-radius: 3px;
+    }
+
+    /* Auto-complétion */
+    .eligibility-test-body .tab ul.ui-autocomplete {
+        background: #666;
+        max-height: 145px;
+        width: 95% !important;
+    }
+
+    .eligibility-test-body .tab ul.ui-autocomplete li a {
+        color: #fff;
+        font-style: italic;
+    }
+
+    .eligibility-test-body .field-validation-error {
+        background: #dc3c14;
+        border-radius: 0 0 3px 3px;
+        color: #fff;
+        line-height: 18px;
+    }
+
+    .eligibility-test-body .field-validation-error a {
+        color: #333;
+    }
+
+    .eligibility-test-body .field-validation-error .MutColor06 {
+        color: #fff;
+    }
+}
